@@ -2,6 +2,7 @@ call pathogen#infect()
 
 set nocompatible
 set filetype=on
+set hidden
 
 set tabstop=4
 set shiftwidth=4
