@@ -21,8 +21,8 @@ set showmode
 set showcmd
 
 set smartindent
-set textwidth=100
-set columns=100
+set textwidth=80
+set columns=80
 set wrap
 
 syntax on
