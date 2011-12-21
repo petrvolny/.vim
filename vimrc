@@ -36,7 +36,9 @@ nnoremap k gk
 map <F6> <Esc>:setlocal spell spelllang=en_us
 map <F7> <Esc>:setlocal nospell
 
-set undofile
+if version >= 730
+    set undofile
+endif
 " jj sends me back to normal mode
 inoremap jj <ESC>
 
