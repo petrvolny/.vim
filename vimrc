@@ -17,8 +17,9 @@ set smartcase
 " UI
 set ruler
 set cursorline
+""set colorcolumn=80
 set showmode
-"set relativenumber
+""set relativenumber
 set showcmd
 
 set smartindent
