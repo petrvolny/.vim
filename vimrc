@@ -15,6 +15,9 @@ set ignorecase
 set smartcase
 
 " UI
+set t_Co=256
+set background=dark
+colorscheme molokai
 set ruler
 set cursorline
 ""set colorcolumn=80
