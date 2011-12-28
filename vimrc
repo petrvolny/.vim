@@ -1,8 +1,9 @@
 call pathogen#infect()
-
+filetype plugin on
 set nocompatible
 set filetype=on
 set hidden
+filetype plugin on
 
 set tabstop=4
 set shiftwidth=4
