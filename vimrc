@@ -1,5 +1,5 @@
 call pathogen#infect()
-
+filetype plugin on
 set nocompatible
 set filetype=on
 set hidden
