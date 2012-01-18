@@ -5,6 +5,11 @@ set filetype=on
 set hidden
 filetype plugin on
 
+" Autocompletion
+autocmd FileType java set omnifunc=javacomplete#CompleteJS
+autocmd FileType javavascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType ruby set omnifunc=rubycomplete#CompleteJS
+
 set tabstop=4
 set shiftwidth=4
 set expandtab
