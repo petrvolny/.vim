@@ -23,8 +23,8 @@ set smartcase
 
 " UI
 set t_Co=256
-set background=dark
-colorscheme molokai
+""set background=dark
+colorscheme desert
 set ruler
 set cursorline
 ""set colorcolumn=80
