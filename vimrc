@@ -13,6 +13,7 @@ autocmd FileType ruby set omnifunc=rubycomplete#CompleteJS
 set tabstop=4
 set shiftwidth=4
 set expandtab
+autocmd BufWritePre *.js :%s/\s\+$//e
 
 " Searching
 set hlsearch
