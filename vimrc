@@ -14,6 +14,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 autocmd BufWritePre *.js :%s/\s\+$//e
+autocmd BufWritePre *.html :%s/\s\+$//e
+autocmd BufWritePre *.scss :%s/\s\+$//e
 
 " Searching
 set hlsearch
