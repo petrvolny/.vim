@@ -35,9 +35,9 @@ set showmode
 set showcmd
 
 set smartindent
-set textwidth=80
-set columns=80
-set wrap
+"set textwidth=80
+"set columns=80
+"set wrap
 
 syntax on
 "set linebreak
@@ -57,11 +57,11 @@ endif
 inoremap jj <ESC>
 
 " append closing brackets
-inoremap {      {}<Left>
+" inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
-inoremap {{     {
-inoremap {}     {}
+" inoremap {{     {
+" inoremap {}     {}
 
 "" close brackets and quotes
 inoremap (      ()<Left>
-inoremap "      ""<Left>
+" inoremap "      ""<Left>
