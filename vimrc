@@ -16,6 +16,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/eclim'
+Bundle 'haesken/vimclojure-vundle'
 
 filetype plugin on
 
