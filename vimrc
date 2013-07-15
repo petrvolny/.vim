@@ -9,11 +9,12 @@ Bundle 'gmarik/vundle'
 
 " Bundle 'Solarized'
 "Bundle 'vim-scripts/neocomplcache'
+Bundle 'nono/vim-handlebars'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
-Bundle 'myusuf3/numbers.vim'
+"Bundle 'myusuf3/numbers.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/eclim'
 Bundle 'haesken/vimclojure-vundle'
@@ -71,8 +72,9 @@ set smartindent
 "set wrap
 
 syntax on
+au BufRead,BufNewFile *.hbs set filetype=handlebars
 "set linebreak
-let g:syntastic_javascript_jshint_conf = '~/Sites/GD/gdc-client/deployment/jslint/jsl-mac'
+"let g:syntastic_javascript_jslint_conf = '~/Sites/GD/gdc-client/tools/linter/vendor/jsl.textmate.conf'
 
 
 " Movement
