@@ -7,17 +7,18 @@ call vundle#rc()
 " Let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-" Bundle 'Solarized'
 "Bundle 'vim-scripts/neocomplcache'
 Bundle 'nono/vim-handlebars'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
-"Bundle 'myusuf3/numbers.vim'
+Bundle 'myusuf3/numbers.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/eclim'
-Bundle 'haesken/vimclojure-vundle'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'guns/vim-clojure-static'
+"Bundle 'haesken/vimclojure-vundle'
 
 filetype plugin on
 
@@ -69,12 +70,16 @@ set showcmd
 set smartindent
 "set textwidth=80
 "set columns=80
-"set wrap
+set nowrap
 
 syntax on
 au BufRead,BufNewFile *.hbs set filetype=handlebars
 "set linebreak
 "let g:syntastic_javascript_jslint_conf = '~/Sites/GD/gdc-client/tools/linter/vendor/jsl.textmate.conf'
+syntax enable
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
 
 
 " Movement
