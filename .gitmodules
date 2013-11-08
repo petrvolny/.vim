@@ -1,3 +1,0 @@
-[submodule "vimclojure-vundle"]
-	path = vimclojure-vundle
-	url = ./bundle/vimclojure-vundle/

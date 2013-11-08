@@ -13,9 +13,7 @@ Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
-Bundle 'myusuf3/numbers.vim'
 Bundle 'scrooloose/nerdtree'
-Bundle 'ervandew/eclim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'guns/vim-clojure-static'
 "Bundle 'haesken/vimclojure-vundle'
@@ -44,6 +42,9 @@ set smartcase
 
 set ruler
 
+set relativenumber 
+set number 
+
 set wildignore+=*/tmp/*,*/distribution/*,.* 
 
 if has('statusline')
@@ -61,7 +62,7 @@ endif
 " UI
 set t_Co=256
 set background=dark
-colorscheme molokai
+colorscheme solarized
 set ruler
 set cursorline
 set showmode
@@ -77,9 +78,6 @@ au BufRead,BufNewFile *.hbs set filetype=handlebars
 "set linebreak
 "let g:syntastic_javascript_jslint_conf = '~/Sites/GD/gdc-client/tools/linter/vendor/jsl.textmate.conf'
 syntax enable
-set background=dark
-colorscheme solarized
-let g:solarized_termcolors=256
 
 
 " Movement
