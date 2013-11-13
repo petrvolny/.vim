@@ -33,6 +33,7 @@ set expandtab
 autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd BufWritePre *.html :%s/\s\+$//e
 autocmd BufWritePre *.scss :%s/\s\+$//e
+autocmd BufWritePre *.less :%s/\s\+$//e
 
 " Searching
 set hlsearch
@@ -75,6 +76,7 @@ set nowrap
 
 syntax on
 au BufRead,BufNewFile *.hbs set filetype=handlebars
+au BufNewFile,BufRead *.less set filetype=css
 "set linebreak
 "let g:syntastic_javascript_jslint_conf = '~/Sites/GD/gdc-client/tools/linter/vendor/jsl.textmate.conf'
 syntax enable
