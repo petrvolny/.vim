@@ -1,5 +1,5 @@
 set nocompatible
-filetype off " required!
+filetype off "required!
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -7,19 +7,22 @@ call vundle#rc()
 " Let Vundle manage Vundle
 Bundle 'gmarik/vundle'
 
-"Bundle 'vim-scripts/neocomplcache'
+" Bundles
 Bundle 'nono/vim-handlebars'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
-Bundle 'altercation/vim-colors-solarized'
+" Clojure
 Bundle 'guns/vim-clojure-static'
-"Bundle 'haesken/vimclojure-vundle'
+Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-classpath'
+" Color themes
+Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin on
-
 set hidden
 
 " Autocompletion
@@ -27,22 +30,19 @@ autocmd FileType java set omnifunc=javacomplete#CompleteJS
 autocmd FileType javavascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType ruby set omnifunc=rubycomplete#CompleteJS
 
-set tabstop=4
-set shiftwidth=4
-set expandtab
+" Delete trailing white chars on save
 autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd BufWritePre *.html :%s/\s\+$//e
 autocmd BufWritePre *.scss :%s/\s\+$//e
 autocmd BufWritePre *.less :%s/\s\+$//e
+autocmd BufWritePre *.ino :%s/\s\+$//e " Arduino files
 
 " Searching
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-
 set ruler
-
 set relativenumber 
 set number 
 
@@ -68,6 +68,9 @@ set ruler
 set cursorline
 set showmode
 set showcmd
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 set smartindent
 "set textwidth=80
@@ -75,29 +78,34 @@ set smartindent
 set nowrap
 
 syntax on
+" Clojure
+au BufRead,BufNewFile *.clj set filetype=clojure
+au BufRead,BufNewFile *.ino set filetype=cpp
+au Syntax clojure RainbowParenthesesActivate
+au Syntax clojure RainbowParenthesesLoadRound
+" Web
 au BufRead,BufNewFile *.hbs set filetype=handlebars
 au BufNewFile,BufRead *.less set filetype=css
-"set linebreak
-"let g:syntastic_javascript_jslint_conf = '~/Sites/GD/gdc-client/tools/linter/vendor/jsl.textmate.conf'
-syntax enable
-
 
 " Movement
 nnoremap j gj
 nnoremap k gk
+" jj sends me back to normal mode
+inoremap jj <ESC>
 
 " spell checker options
 map <F6> <Esc>:setlocal spell spelllang=en_us
 map <F7> <Esc>:setlocal nospell
 
+" Do not make swap files
 set noswapfile
+
+" Enable undofile for modern VIMs
 if version >= 730
     set undofile
 endif
 
 let mapleader=','
-" jj sends me back to normal mode
-inoremap jj <ESC>
 
 " append closing brackets
 inoremap {      {}<Left>
@@ -114,4 +122,3 @@ inoremap ""     "
 
 inoremap '      ''<Left>
 inoremap ''     '
-
