@@ -19,6 +19,10 @@ Bundle 'guns/vim-clojure-static'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-classpath'
+" Nodejs
+Bundle 'digitaltoad/vim-jade'
+"CoffeeScrip
+Bundle 'kchmck/vim-coffee-script'
 " Color themes
 Bundle 'altercation/vim-colors-solarized'
 
@@ -35,6 +39,7 @@ autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd BufWritePre *.html :%s/\s\+$//e
 autocmd BufWritePre *.scss :%s/\s\+$//e
 autocmd BufWritePre *.less :%s/\s\+$//e
+autocmd BufWritePre *.jade :%s/\s\+$//e
 autocmd BufWritePre *.ino :%s/\s\+$//e " Arduino files
 
 " Searching
@@ -86,6 +91,7 @@ au Syntax clojure RainbowParenthesesLoadRound
 " Web
 au BufRead,BufNewFile *.hbs set filetype=handlebars
 au BufNewFile,BufRead *.less set filetype=css
+au BufNewFile,BufRead *.jade set filetype=jade
 
 " Movement
 nnoremap j gj
