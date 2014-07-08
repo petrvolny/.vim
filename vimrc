@@ -5,28 +5,30 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
  
 " Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " Bundles
-Bundle 'nono/vim-handlebars'
-Bundle 'ervandew/supertab'
-Bundle 'tpope/vim-fugitive'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
+Plugin 'nono/vim-handlebars'
+Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
 " Clojure
-Bundle 'guns/vim-clojure-static'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'tpope/vim-fireplace'
-Bundle 'tpope/vim-classpath'
+Plugin 'guns/vim-clojure-static'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-classpath'
 " Nodejs
-Bundle 'digitaltoad/vim-jade'
+Plugin 'digitaltoad/vim-jade'
 "CoffeeScrip
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'kchmck/vim-coffee-script'
 " Color themes
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 
-filetype plugin on
+call vundle#end()  " required
+filetype plugin on " required
+
 set hidden
 
 " Autocompletion
@@ -86,7 +88,7 @@ syntax on
 " Clojure
 au BufRead,BufNewFile *.clj set filetype=clojure
 au BufRead,BufNewFile *.ino set filetype=cpp
-au Syntax clojure RainbowParenthesesActivate
+au Syntax clojure RainbowParenthesesToggle
 au Syntax clojure RainbowParenthesesLoadRound
 " Web
 au BufRead,BufNewFile *.hbs set filetype=handlebars
