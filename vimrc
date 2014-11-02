@@ -108,6 +108,9 @@ map <F7> <Esc>:setlocal nospell
 " Do not make swap files
 set noswapfile
 
+" ctrlp ssttings
+let g:ctrlp_custom_ignore = 'node_modules'
+
 " Enable undofile for modern VIMs
 if version >= 730
     set undofile
