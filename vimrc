@@ -43,6 +43,9 @@ autocmd BufWritePre *.scss :%s/\s\+$//e
 autocmd BufWritePre *.less :%s/\s\+$//e
 autocmd BufWritePre *.jade :%s/\s\+$//e
 autocmd BufWritePre *.ino :%s/\s\+$//e " Arduino files
+autocmd BufWritePre *.rb :%s/\s\+$//e
+autocmd BufWritePre *.haml :%s/\s\+$//e
+autocmd BufWritePre *.coffee :%s/\s\+$//e
 
 " Searching
 set hlsearch
@@ -52,6 +55,8 @@ set smartcase
 set ruler
 set relativenumber 
 set number 
+
+autocmd QuickFixCmdPost *grep* cwindow
 
 set wildignore+=*/tmp/*,*/distribution/*,.* 
 
@@ -90,10 +95,20 @@ au BufRead,BufNewFile *.clj set filetype=clojure
 au BufRead,BufNewFile *.ino set filetype=cpp
 au Syntax clojure RainbowParenthesesToggle
 au Syntax clojure RainbowParenthesesLoadRound
+" Ruby
+au BufRead,BufNewFile *.rb set filetype=ruby
+au BufRead,BufNewFile *.haml set filetype=haml
+au BufRead,BufNewFile *.coffee set filetype=coffee
+au FileType ruby set softtabstop=4 tabstop=4 shiftwidth=4 noexpandtab
+au FileType haml set softtabstop=4 tabstop=4 shiftwidth=4 noexpandtab
+au FileType coffee set tabstop=4 shiftwidth=4 expandtab
+let g:syntastic_ruby_checkers = ['rubocop']
 " Web
 au BufRead,BufNewFile *.hbs set filetype=handlebars
 au BufNewFile,BufRead *.less set filetype=css
 au BufNewFile,BufRead *.jade set filetype=jade
+
+filetype plugin indent on
 
 " Movement
 nnoremap j gj
