@@ -14,6 +14,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
+Plugin 'editorconfig/editorconfig-vim'
 " Clojure
 Plugin 'guns/vim-clojure-static'
 Plugin 'kien/rainbow_parentheses.vim'
@@ -96,12 +97,6 @@ au BufRead,BufNewFile *.ino set filetype=cpp
 au Syntax clojure RainbowParenthesesToggle
 au Syntax clojure RainbowParenthesesLoadRound
 " Ruby
-au BufRead,BufNewFile *.rb set filetype=ruby
-au BufRead,BufNewFile *.haml set filetype=haml
-au BufRead,BufNewFile *.coffee set filetype=coffee
-au FileType ruby set softtabstop=4 tabstop=4 shiftwidth=4 noexpandtab
-au FileType haml set softtabstop=4 tabstop=4 shiftwidth=4 noexpandtab
-au FileType coffee set tabstop=4 shiftwidth=4 expandtab
 let g:syntastic_ruby_checkers = ['rubocop']
 " Web
 au BufRead,BufNewFile *.hbs set filetype=handlebars
