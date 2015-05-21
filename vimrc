@@ -19,7 +19,6 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'guns/vim-clojure-static'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-classpath'
 " Nodejs
 Plugin 'digitaltoad/vim-jade'
 "CoffeeScrip
