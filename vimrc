@@ -23,6 +23,8 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'digitaltoad/vim-jade'
 "CoffeeScrip
 Plugin 'kchmck/vim-coffee-script'
+" Rails
+Plugin 'tpope/vim-rails'
 " Color themes
 Plugin 'altercation/vim-colors-solarized'
 
