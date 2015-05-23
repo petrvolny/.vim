@@ -25,6 +25,7 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'kchmck/vim-coffee-script'
 " Rails
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
 " Color themes
 Plugin 'altercation/vim-colors-solarized'
 
