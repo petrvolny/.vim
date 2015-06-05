@@ -95,6 +95,7 @@ set nowrap
 syntax on
 " Clojure
 au BufRead,BufNewFile *.clj set filetype=clojure
+au BufRead,BufNewFile *.boot set filetype=clojure
 au BufRead,BufNewFile *.ino set filetype=cpp
 au Syntax clojure RainbowParenthesesToggle
 au Syntax clojure RainbowParenthesesLoadRound
