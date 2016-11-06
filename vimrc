@@ -28,6 +28,10 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 " Color themes
 Plugin 'altercation/vim-colors-solarized'
+" Neovim
+if has('nvim')
+    Plugin 'kassio/neoterm'
+endif
 
 call vundle#end()  " required
 filetype plugin on " required
