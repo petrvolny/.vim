@@ -145,6 +145,11 @@ inoremap {<CR>  {<CR>}<Esc>O
 "" close brackets and quotes
 inoremap (      ()<Left>
 inoremap ((     (
+inoremap ()     ()
+
+inoremap [      []<Left>
+inoremap [[     [
+inoremap []     []
 
 inoremap "      ""<Left>
 inoremap ""     "
