@@ -15,6 +15,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'tpope/vim-surround'
 " Clojure
 Plugin 'guns/vim-clojure-static'
 Plugin 'kien/rainbow_parentheses.vim'
